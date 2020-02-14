@@ -20,12 +20,14 @@ public class AdditionalController {
 
 
 
-    public String inputFromScannerLogin(Scanner sc, String regEx){
+    public String inputFromScanner(String message, String regEx){
 
-        while(!sc.nextLine().matches(regEx)){
-            view.printMessage(View.WRONG_INPUT + View.INPUT_LOGIN);
+        String res;
+        view.printMessage(message);
+        while(!(scanner.hasNext() && (res = scanner.next()).matches(regEx))){
+            view.printWrongStringInput(message);
 
         }
-        return "True";
+        return res;
     }
 }

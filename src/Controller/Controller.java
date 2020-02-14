@@ -20,9 +20,10 @@ public class Controller {
 
     public void processUser(){
         Scanner sc = new Scanner(System.in);
-        AdditionalController additional = new AdditionalController(view,sc);
-        view.printMessage(View.INPUT_LOGIN);
-        model.Check(additional.inputFromScannerLogin(sc,RegExContainer.LOGIN_USER));
+       InputNoteBook inputNoteBook = new InputNoteBook(view,sc);
+       inputNoteBook.inputNote();
+
+
 
 
     }
