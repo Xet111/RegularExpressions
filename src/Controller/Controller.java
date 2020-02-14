@@ -17,11 +17,12 @@ public class Controller {
     String name;
     String login;
 
-    additionalController additional = new additionalController();
+
     public void processUser(){
         Scanner sc = new Scanner(System.in);
+        AdditionalController additional = new AdditionalController(view,sc);
         view.printMessage(View.INPUT_LOGIN);
-        model.Check(additional.inputFromScannerLogin(sc));
+        model.Check(additional.inputFromScannerLogin(sc,RegExContainer.LOGIN_USER));
 
 
     }
