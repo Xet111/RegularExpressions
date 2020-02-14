@@ -14,8 +14,6 @@ public class Controller {
 
     }
 
-    String name;
-    String login;
 
 
     public void processUser(){
